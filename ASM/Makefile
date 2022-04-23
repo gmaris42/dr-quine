@@ -6,7 +6,7 @@
 #    By: gmaris <gmaris@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/23 14:20:40 by gmaris            #+#    #+#              #
-#    Updated: 2022/04/23 14:53:22 by gmaris           ###   ########.fr        #
+#    Updated: 2022/04/23 17:55:42 by gmaris           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,11 +42,11 @@ RED = \033[031m
 PURPLE = \033[35m
 RESET = \033[0m
 
-$(OBJ_DIR)%.o : $(SRC_DIR)%.s Makefile
+$(OBJ_DIR)%.o : $(SRC_DIR)%.s Makefile $(OBJ_DIR)
 	@$(NASME) $(FLAGS_ASM) $< -o $@
 	@echo "$(YELLOW)$(notdir $(basename $@))...$(RESET)\t\t[$(GREEN)OK$(RESET)]"
 
-all: $(OBJ_DIR) $(COLLEEN_NAME) $(GRACE_NAME) $(SULLY_NAME)
+all: $(OBJ_DIR) $(COLLEEN_NAME) #$(GRACE_NAME) $(SULLY_NAME)
 
 $(COLLEEN_NAME): $(COLLEEN_OBJ)
 	@echo "\n$(PURPLE)Sources compilation for $(COLLEEN_NAME)\t$(RESET)[$(GREEN)OK$(RESET)]\n"
@@ -77,6 +77,6 @@ fclean: clean
 	@rm -rf $(COLLEEN_NAME) $(GRACE_NAME) $(SULLY_NAME)
 	@echo "$(RED)$(COLLEEN_NAME), $(GRACE_NAME) and $(SULLY_NAME)...$(RESET)[$(PURPLE)deleted$(RESET)]\n"
 
-re: flcean all
+re: fclean all
 
 .PHONY: re clean flcean all
