@@ -1,5 +1,5 @@
 # Dr-Quine
-## Projet Dr-Quine | Self-replication | 42 Paris | 42 Network
+## Projet Dr-Quine | Self-replication | 42 Paris | 42 Network | C | ASM
 ### Description:<br>
 * This small algo project will get you acquainted with auto-replication problems and confront the Kleene recursion theorem. 
 <br>
