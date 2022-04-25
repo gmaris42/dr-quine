@@ -6,7 +6,7 @@
 #    By: gmaris <gmaris@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/23 14:20:38 by gmaris            #+#    #+#              #
-#    Updated: 2022/04/23 18:28:41 by gmaris           ###   ########.fr        #
+#    Updated: 2022/04/25 21:09:44 by gmaris           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -86,7 +86,7 @@ clean:
 	@echo "\n$(RED)Obj directory...$(RESET)[$(PURPLE)deleted$(RESET)]\n"
 
 fclean: clean
-	@rm -rf $(COLLEEN_NAME) $(GRACE_NAME) $(SULLY_NAME)
+	@rm -rf $(COLLEEN_NAME) $(GRACE_NAME) $(SULLY_NAME) Sully_*
 	@echo "$(RED)$(COLLEEN_NAME), $(GRACE_NAME) and $(SULLY_NAME)...$(RESET)[$(PURPLE)deleted$(RESET)]\n"
 
 re: flcean all
