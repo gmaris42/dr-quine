@@ -6,7 +6,7 @@
 #    By: gmaris <gmaris@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/23 14:20:40 by gmaris            #+#    #+#              #
-#    Updated: 2022/04/23 20:34:53 by gmaris           ###   ########.fr        #
+#    Updated: 2022/04/25 14:07:43 by gmaris           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -71,6 +71,7 @@ $(OBJ_DIR):
 
 clean:
 	@rm -rf $(OBJ_DIR)
+	@rm -rf Grace_kid.s
 	@echo "\n$(RED)Obj directory...$(RESET)[$(PURPLE)deleted$(RESET)]\n"
 
 fclean: clean
