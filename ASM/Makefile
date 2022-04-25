@@ -6,7 +6,7 @@
 #    By: gmaris <gmaris@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/23 14:20:40 by gmaris            #+#    #+#              #
-#    Updated: 2022/04/25 14:07:43 by gmaris           ###   ########.fr        #
+#    Updated: 2022/04/25 19:27:23 by gmaris           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,7 +46,7 @@ $(OBJ_DIR)%.o : $(SRC_DIR)%.s Makefile $(OBJ_DIR)
 	@$(NASME) $(FLAGS_ASM) $< -o $@
 	@echo "$(YELLOW)$(notdir $(basename $@))...$(RESET)\t\t[$(GREEN)OK$(RESET)]"
 
-all: $(OBJ_DIR) $(COLLEEN_NAME) $(GRACE_NAME) #$(SULLY_NAME)
+all: $(OBJ_DIR) $(COLLEEN_NAME) $(GRACE_NAME) $(SULLY_NAME)
 
 $(COLLEEN_NAME): $(COLLEEN_OBJ)
 	@echo "\n$(PURPLE)Sources compilation for $(COLLEEN_NAME)\t$(RESET)[$(GREEN)OK$(RESET)]\n"
@@ -71,7 +71,7 @@ $(OBJ_DIR):
 
 clean:
 	@rm -rf $(OBJ_DIR)
-	@rm -rf Grace_kid.s
+	@rm -rf Grace_kid.s Sully_* Sully_*
 	@echo "\n$(RED)Obj directory...$(RESET)[$(PURPLE)deleted$(RESET)]\n"
 
 fclean: clean
